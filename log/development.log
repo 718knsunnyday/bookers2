@@ -302,3 +302,1485 @@ Migrating to AddProfileImageIdToUsers (20211022082149)
   ↳ bin/rails:9
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+Started GET "/" for 122.197.116.28 at 2021-10-22 08:24:55 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 266ms (Views: 259.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 122.197.116.28 at 2021-10-22 08:24:57 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 88ms (Views: 75.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 122.197.116.28 at 2021-10-22 08:25:07 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YYY8HlNZaLx01FlVCQImWhy+44sroC56wRc5WpjDz4D7iqbq1pvgJssuaJniwafvR98I1iOYc96cfz1Jdr0PFg==", "user"=>{"name"=>"111", "email"=>"111@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "111@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "111@gmail.com"], ["encrypted_password", "$2a$12$cNcGrTAxmYCdz0fZZUpgA.cC/MrZAfAi9PW25F2Hb2iJfvNJwKvbW"], ["name", "111"], ["created_at", "2021-10-22 08:25:07.742378"], ["updated_at", "2021-10-22 08:25:07.742378"]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://cde054a8a66448eb8653ea7e9668ae02.vfs.cloud9.us-east-1.amazonaws.com/users
+Completed 302 Found in 332ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/users" for 122.197.116.28 at 2021-10-22 08:25:07 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/index.html.erb within layouts/application
+  Rendered books/_list.html.erb (5.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 70ms (Views: 49.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1" for 122.197.116.28 at 2021-10-22 08:25:12 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_list.html.erb:18
+  Rendered books/_list.html.erb (3.6ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 36ms (Views: 32.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 122.197.116.28 at 2021-10-22 08:25:13 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/index.html.erb within layouts/application
+  Rendered books/_list.html.erb (2.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 55ms (Views: 52.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books" for 122.197.116.28 at 2021-10-22 08:25:14 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:4
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/_list.html.erb (3.6ms)
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 64ms (Views: 60.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for 122.197.116.28 at 2021-10-22 08:25:15 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (6.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:24
+Completed 200 OK in 72ms (Views: 69.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/users/1" for 122.197.116.28 at 2021-10-22 08:25:22 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ggxs8hZQk0hdPaFFIhn7IOghMjQg8XoKjwAghFixrcQVxElSugU17tVKU2668FiJx67WUQdy+ORbPy237MeJBg==", "user"=>{"name"=>"111", "profile_image"=>#<ActionDispatch::Http::UploadedFile:0x00007fe289946fb0 @tempfile=#<Tempfile:/tmp/RackMultipart20211022-30233-7kp6bf.jpeg>, @original_filename="82608894.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[profile_image]\"; filename=\"82608894.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "introduction"=>"a"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:21
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE "users" SET "introduction" = ?, "profile_image_id" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["introduction", "a"], ["profile_image_id", "b23f0e9bc141f05f7ba8714f9367ec593ade2bc2e5317d15b040716d4ef8"], ["updated_at", "2021-10-22 08:25:22.316277"], ["id", 1]]
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:21
+Redirected to https://cde054a8a66448eb8653ea7e9668ae02.vfs.cloud9.us-east-1.amazonaws.com/users/1
+Completed 302 Found in 15ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/users/1" for 122.197.116.28 at 2021-10-22 08:25:22 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_list.html.erb:18
+  Rendered books/_list.html.erb (2.9ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 47ms (Views: 44.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/81731b4c88b4cd81f7fd1249b2b1464ae33087e5/store/b23f0e9bc141f05f7ba8714f9367ec593ade2bc2e5317d15b040716d4ef8/profile_image" for 122.197.116.28 at 2021-10-22 08:25:22 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-10-22 08:25:22 +0000] GET "/81731b4c88b4cd81f7fd1249b2b1464ae33087e5/store/b23f0e9bc141f05f7ba8714f9367ec593ade2bc2e5317d15b040716d4ef8/profile_image" 200 5.5ms
+
+Started POST "/books" for 122.197.116.28 at 2021-10-22 08:25:28 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QiYI/pqJUCZizTMUYlpEiboRD383xZdl2cMZouYgVvdGlzYlQKcLqUdP2CWpI5bbARtN7DRu6oxvU5hv+y4sgA==", "book"=>{"title"=>"a", "body"=>"a"}, "commit"=>"Create book"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:18
+  [1m[36mBook Create (0.8ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "a"], ["body", "a"], ["user_id", 1], ["created_at", "2021-10-22 08:25:28.527810"], ["updated_at", "2021-10-22 08:25:28.527810"]]
+  ↳ app/controllers/books_controller.rb:18
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:18
+Redirected to https://cde054a8a66448eb8653ea7e9668ae02.vfs.cloud9.us-east-1.amazonaws.com/books/1
+Completed 302 Found in 46ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/books/1" for 122.197.116.28 at 2021-10-22 08:25:28 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (2.6ms)
+  Rendered books/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 62ms (Views: 56.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/5c0967d9ff790e0b080fe14f2d94b550cef36819/store/fill/40/40/b23f0e9bc141f05f7ba8714f9367ec593ade2bc2e5317d15b040716d4ef8/profile_image.jpeg" for 122.197.116.28 at 2021-10-22 08:25:29 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-10-22 08:25:29 +0000] GET "/5c0967d9ff790e0b080fe14f2d94b550cef36819/store/fill/40/40/b23f0e9bc141f05f7ba8714f9367ec593ade2bc2e5317d15b040716d4ef8/profile_image.jpeg" 200 150.6ms
+
+Started GET "/books/1" for 122.197.116.28 at 2021-10-22 08:27:37 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.4ms)
+  Rendered books/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 35ms (Views: 31.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/1" for 122.197.116.28 at 2021-10-22 08:28:36 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/bookers2/app/views/books/show.html.erb:25: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/bookers2/app/views/books/show.html.erb:27: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/books/show.html.erb:25: syntax error, unexpected ensure, expecting ')'
+app/views/books/show.html.erb:27: syntax error, unexpected end, expecting ')'
+Started GET "/books/1" for 122.197.116.28 at 2021-10-22 08:29:36 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.4ms)
+  Rendered books/show.html.erb within layouts/application (330.3ms)
+Completed 500 Internal Server Error in 336ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00007fe289657ef8>:0x00007fe2887a7f20>
+Did you mean?  @user):
+     8:         <table class="table table-hover table-inverse">
+     9:           <tbody>
+    10:               <td><%= attachment_image_tag @user, :profile_image, :fill, 40, 40, format: 'jpeg', fallback: "no_image.jpg" %><br>
+    11:                   <%= link_to @user.name, user_path(user.id) %></td>
+    12:               <td><%= @books.title %></td>
+    13:               <td><%= @books.body %></td>
+    14:               <td><%= link_to "Edit", edit_book_path, class: "btn btn-sm btn-success" %></td>
+  
+app/views/books/show.html.erb:11:in `_app_views_books_show_html_erb___3562826826381001902_70305464515380'
+Started GET "/books/1" for 122.197.116.28 at 2021-10-22 08:30:08 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.3ms)
+  Rendered books/show.html.erb within layouts/application (373.9ms)
+Completed 500 Internal Server Error in 380ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00007fe289657ef8>:0x00007fe289bf1f58>
+Did you mean?  @user):
+     8:         <table class="table table-hover table-inverse">
+     9:           <tbody>
+    10:               <td><%= attachment_image_tag @user, :profile_image, :fill, 40, 40, format: 'jpeg', fallback: "no_image.jpg" %><br>
+    11:                   <%= link_to user.name, user_path(user.id) %></td>
+    12:               <td><%= @books.title %></td>
+    13:               <td><%= @books.body %></td>
+    14:               <td><%= link_to "Edit", edit_book_path, class: "btn btn-sm btn-success" %></td>
+  
+app/views/books/show.html.erb:11:in `_app_views_books_show_html_erb___3562826826381001902_70305475171340'
+Started GET "/books/1" for 122.197.116.28 at 2021-10-22 08:30:30 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.4ms)
+  Rendered books/show.html.erb within layouts/application (286.5ms)
+Completed 500 Internal Server Error in 303ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00007fe289657ef8>:0x00007fe29c316ab0>
+Did you mean?  @user):
+     8:         <table class="table table-hover table-inverse">
+     9:           <tbody>
+    10:               <td><%= attachment_image_tag @user, :profile_image, :fill, 40, 40, format: 'jpeg', fallback: "no_image.jpg" %><br>
+    11:                   <%= link_to "@user.name", user_path(user.id) %></td>
+    12:               <td><%= @books.title %></td>
+    13:               <td><%= @books.body %></td>
+    14:               <td><%= link_to "Edit", edit_book_path, class: "btn btn-sm btn-success" %></td>
+  
+app/views/books/show.html.erb:11:in `_app_views_books_show_html_erb___3562826826381001902_70305629911500'
+Started GET "/books/1" for 122.197.116.28 at 2021-10-22 08:31:36 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.4ms)
+  Rendered books/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 36ms (Views: 32.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/1" for 122.197.116.28 at 2021-10-22 08:31:39 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.4ms)
+  Rendered books/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 34ms (Views: 30.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/1" for 122.197.116.28 at 2021-10-22 08:31:40 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.3ms)
+  Rendered books/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 34ms (Views: 28.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/1" for 122.197.116.28 at 2021-10-22 08:31:41 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.4ms)
+  Rendered books/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 44ms (Views: 40.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/1" for 122.197.116.28 at 2021-10-22 08:32:16 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.3ms)
+  Rendered books/show.html.erb within layouts/application (282.7ms)
+Completed 500 Internal Server Error in 288ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00007fe289657ef8>:0x00007fe28932a708>
+Did you mean?  @user):
+     8:         <table class="table table-hover table-inverse">
+     9:           <tbody>
+    10:               <td><%= attachment_image_tag @user, :profile_image, :fill, 40, 40, format: 'jpeg', fallback: "no_image.jpg" %><br>
+    11:                   <%= link_to @user.name, user_path(user.id) %></td>
+    12:               <td><%= @books.title %></td>
+    13:               <td><%= @books.body %></td>
+    14:               <td><%= link_to "Edit", edit_book_path, class: "btn btn-sm btn-success" %></td>
+  
+app/views/books/show.html.erb:11:in `_app_views_books_show_html_erb___3562826826381001902_70305470570100'
+Started GET "/books/1" for 122.197.116.28 at 2021-10-22 08:36:21 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.5ms)
+  Rendered books/show.html.erb within layouts/application (288.1ms)
+Completed 500 Internal Server Error in 294ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00007fe289657ef8>:0x00007fe289300318>
+Did you mean?  @user):
+     8:         <table class="table table-hover table-inverse">
+     9:           <tbody>
+    10:               <td><%= attachment_image_tag @user, :profile_image, :fill, 40, 40, format: 'jpeg', fallback: "no_image.jpg" %><br>
+    11:                   <%= link_to user_path(user.id) do %>
+    12:                   <%= @user.name %>
+    13:                   <% end %></td>
+    14:               <td><%= @books.title %></td>
+  
+app/views/books/show.html.erb:11:in `_app_views_books_show_html_erb___3562826826381001902_70305470484360'
+Started GET "/books/1" for 122.197.116.28 at 2021-10-22 08:36:37 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/bookers2/app/views/books/show.html.erb:11: syntax error, unexpected '(', expecting end
+...er.append=  link_to @user_path(user.id) do @output_buffer.sa...
+...                              ^
+/home/ec2-user/environment/bookers2/app/views/books/show.html.erb:11: syntax error, unexpected ')', expecting end
+...d=  link_to @user_path(user.id) do @output_buffer.safe_appen...
+...                              ^
+/home/ec2-user/environment/bookers2/app/views/books/show.html.erb:27: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/books/show.html.erb:11: syntax error, unexpected '(', expecting end
+app/views/books/show.html.erb:11: syntax error, unexpected ')', expecting end
+app/views/books/show.html.erb:27: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/books/1" for 122.197.116.28 at 2021-10-22 08:37:15 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.4ms)
+  Rendered books/show.html.erb within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `naem' for #<User:0x00007fe2896004c8>
+Did you mean?  name):
+     8:         <table class="table table-hover table-inverse">
+     9:           <tbody>
+    10:               <td><%= attachment_image_tag @user, :profile_image, :fill, 40, 40, format: 'jpeg', fallback: "no_image.jpg" %><br>
+    11:                   <%= link_to @user.naem %>
+    12:                   </td>
+    13:               <td><%= @books.title %></td>
+    14:               <td><%= @books.body %></td>
+  
+app/views/books/show.html.erb:11:in `_app_views_books_show_html_erb___3562826826381001902_70305472097600'
+Started GET "/books/1" for 122.197.116.28 at 2021-10-22 08:37:24 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.4ms)
+  Rendered books/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 33ms (Views: 29.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/1" for 122.197.116.28 at 2021-10-22 08:37:26 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.3ms)
+  Rendered books/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 33ms (Views: 29.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/1" for 122.197.116.28 at 2021-10-22 08:38:35 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (3.8ms)
+  Rendered books/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 369ms (Views: 331.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/1" for 122.197.116.28 at 2021-10-22 08:38:37 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_list.html.erb:18
+  Rendered books/_list.html.erb (3.1ms)
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 38ms (Views: 34.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/attachments/b99bf0ebe7e0320540d02d838b742944b86f442c/store/fill/5/5/b23f0e9bc141f05f7ba8714f9367ec593ade2bc2e5317d15b040716d4ef8/profile_image.jpeg" for 122.197.116.28 at 2021-10-22 08:38:38 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-10-22 08:38:38 +0000] GET "/b99bf0ebe7e0320540d02d838b742944b86f442c/store/fill/5/5/b23f0e9bc141f05f7ba8714f9367ec593ade2bc2e5317d15b040716d4ef8/profile_image.jpeg" 200 89.5ms
+
+Started GET "/users/1" for 122.197.116.28 at 2021-10-22 08:38:41 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_list.html.erb:18
+  Rendered books/_list.html.erb (2.9ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 38ms (Views: 34.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 122.197.116.28 at 2021-10-22 08:38:47 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_list.html.erb:18
+  Rendered books/_list.html.erb (2.8ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 36ms (Views: 33.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for 122.197.116.28 at 2021-10-22 08:38:48 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:24
+Completed 200 OK in 55ms (Views: 52.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/users/1" for 122.197.116.28 at 2021-10-22 08:38:53 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fuld17pwFc2Dqj+cQbpNYxhZ2iYi6JYbtkbnt2ooGb8ZIXh3FiWzawvdzbfZU+7KN9Y+QwVrFPVieeqE3l49fQ==", "user"=>{"name"=>"111", "profile_image"=>#<ActionDispatch::Http::UploadedFile:0x00007f0cb5f3ee40 @tempfile=#<Tempfile:/tmp/RackMultipart20211022-30983-sr1kgv.jpeg>, @original_filename="82608894.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[profile_image]\"; filename=\"82608894.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "introduction"=>"a"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:21
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "profile_image_id" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["profile_image_id", "418fcfa56b89c170b3ab67ec967065d4e840b54d24981310ac4dd39f5ced"], ["updated_at", "2021-10-22 08:38:53.685156"], ["id", 1]]
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:21
+Redirected to https://cde054a8a66448eb8653ea7e9668ae02.vfs.cloud9.us-east-1.amazonaws.com/users/1
+Completed 302 Found in 18ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/users/1" for 122.197.116.28 at 2021-10-22 08:38:53 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_list.html.erb:18
+  Rendered books/_list.html.erb (3.9ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 64ms (Views: 60.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/c03043741d0f07ae04668ba2867dd160a9b3cfee/store/418fcfa56b89c170b3ab67ec967065d4e840b54d24981310ac4dd39f5ced/profile_image" for 122.197.116.28 at 2021-10-22 08:38:54 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/7bd57ed66d1ce01aa245aa2c89dbe1d58907e59f/store/fill/5/5/418fcfa56b89c170b3ab67ec967065d4e840b54d24981310ac4dd39f5ced/profile_image.jpeg" for 122.197.116.28 at 2021-10-22 08:38:54 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-10-22 08:38:54 +0000] GET "/c03043741d0f07ae04668ba2867dd160a9b3cfee/store/418fcfa56b89c170b3ab67ec967065d4e840b54d24981310ac4dd39f5ced/profile_image" 200 5.6ms
+
+Refile::App: [2021-10-22 08:38:54 +0000] GET "/7bd57ed66d1ce01aa245aa2c89dbe1d58907e59f/store/fill/5/5/418fcfa56b89c170b3ab67ec967065d4e840b54d24981310ac4dd39f5ced/profile_image.jpeg" 200 59.8ms
+
+Started GET "/users/1" for 122.197.116.28 at 2021-10-22 08:39:39 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_list.html.erb:18
+  Rendered books/_list.html.erb (3.3ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 44ms (Views: 40.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/c43ad6e939a91caa83af8a40a570b3f2918c821a/store/fill/40/40/418fcfa56b89c170b3ab67ec967065d4e840b54d24981310ac4dd39f5ced/profile_image.jpeg" for 122.197.116.28 at 2021-10-22 08:39:40 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-10-22 08:39:40 +0000] GET "/c43ad6e939a91caa83af8a40a570b3f2918c821a/store/fill/40/40/418fcfa56b89c170b3ab67ec967065d4e840b54d24981310ac4dd39f5ced/profile_image.jpeg" 200 62.7ms
+
+Started GET "/users/1" for 122.197.116.28 at 2021-10-22 08:39:58 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_list.html.erb:18
+  Rendered books/_list.html.erb (2.9ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 35ms (Views: 32.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 122.197.116.28 at 2021-10-22 08:40:21 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_list.html.erb:18
+  Rendered books/_list.html.erb (2.8ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 122.197.116.28 at 2021-10-22 08:40:24 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_list.html.erb:18
+  Rendered books/_list.html.erb (4.8ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 55ms (Views: 52.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 122.197.116.28 at 2021-10-22 08:40:26 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_list.html.erb:18
+  Rendered books/_list.html.erb (3.2ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 51ms (Views: 48.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 122.197.116.28 at 2021-10-22 08:40:32 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_list.html.erb:18
+  Rendered books/_list.html.erb (3.8ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 83ms (Views: 80.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 122.197.116.28 at 2021-10-22 08:40:34 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_list.html.erb:18
+  Rendered books/_list.html.erb (2.9ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 36ms (Views: 33.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 122.197.116.28 at 2021-10-22 08:40:35 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_list.html.erb:18
+  Rendered books/_list.html.erb (2.8ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 35ms (Views: 32.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 122.197.116.28 at 2021-10-22 08:40:36 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_list.html.erb:18
+  Rendered books/_list.html.erb (2.9ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/1" for 122.197.116.28 at 2021-10-22 08:40:37 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.4ms)
+  Rendered books/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 33ms (Views: 29.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 122.197.116.28 at 2021-10-22 08:40:51 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_list.html.erb:18
+  Rendered books/_list.html.erb (2.8ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 35ms (Views: 32.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/books" for 122.197.116.28 at 2021-10-22 08:41:36 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pVb7cnj5fpw+vI4u+Uw51V/vEYp//Dq1kRiEEc499PxMdjfN0cQzk/o1GxrL3Hi7TIQUzsBLwVWo3i1WPYD7fw==", "book"=>{"title"=>"a", "body"=>"a"}, "commit"=>"Create book"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:18
+  [1m[36mBook Create (0.8ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "a"], ["body", "a"], ["user_id", 1], ["created_at", "2021-10-22 08:41:36.096184"], ["updated_at", "2021-10-22 08:41:36.096184"]]
+  ↳ app/controllers/books_controller.rb:18
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:18
+Redirected to https://cde054a8a66448eb8653ea7e9668ae02.vfs.cloud9.us-east-1.amazonaws.com/books/2
+Completed 302 Found in 37ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/books/2" for 122.197.116.28 at 2021-10-22 08:41:36 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.5ms)
+  Rendered books/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 36ms (Views: 30.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/2" for 122.197.116.28 at 2021-10-22 08:42:33 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=2):
+  
+app/controllers/users_controller.rb:10:in `show'
+Started GET "/books/2" for 122.197.116.28 at 2021-10-22 08:42:39 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.4ms)
+  Rendered books/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 35ms (Views: 29.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 122.197.116.28 at 2021-10-22 08:42:54 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/index.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 35ms (Views: 32.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 122.197.116.28 at 2021-10-22 08:44:54 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/index.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 49ms (Views: 45.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/books" for 122.197.116.28 at 2021-10-22 08:45:00 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J5dz0FCdeKr1AJ9m9UfvcV94LzqXUFCmgBAsookuluUjJk0LirMjJdCCdFc+Pj0j5HJtqZT7LU82gK1vlCDskg==", "book"=>{"title"=>"c", "body"=>"c"}, "commit"=>"Create book"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:18
+  [1m[36mBook Create (0.8ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "c"], ["body", "c"], ["user_id", 1], ["created_at", "2021-10-22 08:45:00.940942"], ["updated_at", "2021-10-22 08:45:00.940942"]]
+  ↳ app/controllers/books_controller.rb:18
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:18
+Redirected to https://cde054a8a66448eb8653ea7e9668ae02.vfs.cloud9.us-east-1.amazonaws.com/books/3
+Completed 302 Found in 13ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/books/3" for 122.197.116.28 at 2021-10-22 08:45:01 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.5ms)
+  Rendered books/show.html.erb within layouts/application (463.5ms)
+Completed 500 Internal Server Error in 470ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `book' for #<#<Class:0x00000000047a6968>:0x00007f0cb57087a8>
+Did you mean?  @book
+               @books):
+    10:               <td><%= attachment_image_tag @user, :profile_image, :fill, 40, 40, format: 'jpeg', fallback: "no_image.jpg" %><br>
+    11:                   <%= link_to @user.name, users_path %>
+    12:                   </td>
+    13:               <td><%= link_to @books.title, book_path(book.id) %></td>
+    14:               <td><%= @books.body %></td>
+    15:               <td><%= link_to "Edit", edit_book_path, class: "btn btn-sm btn-success" %></td>
+    16:               <td><%= link_to "Destroy", book_path, method: :delete, class: "btn btn-sm btn-danger", "data-confirm" => "本当に消しますか？" %></td>
+  
+app/views/books/show.html.erb:13:in `_app_views_books_show_html_erb___1910343540749385003_69846280194160'
+Started GET "/books/3" for 122.197.116.28 at 2021-10-22 08:45:16 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (2.3ms)
+  Rendered books/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 62ms (Views: 56.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/3" for 122.197.116.28 at 2021-10-22 08:45:18 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (2.2ms)
+  Rendered books/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 52ms (Views: 48.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/3" for 122.197.116.28 at 2021-10-22 08:45:19 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.5ms)
+  Rendered books/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 69ms (Views: 65.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/3" for 122.197.116.28 at 2021-10-22 08:45:20 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.4ms)
+  Rendered books/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 35ms (Views: 29.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 122.197.116.28 at 2021-10-22 08:45:21 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/index.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/3" for 122.197.116.28 at 2021-10-22 08:45:26 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.4ms)
+  Rendered books/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 33ms (Views: 29.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/3" for 122.197.116.28 at 2021-10-22 08:46:30 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.3ms)
+  Rendered books/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 33ms (Views: 29.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/3" for 122.197.116.28 at 2021-10-22 08:46:31 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.3ms)
+  Rendered books/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 46ms (Views: 42.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 122.197.116.28 at 2021-10-22 08:47:15 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_list.html.erb:18
+  Rendered books/_list.html.erb (2.8ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 40ms (Views: 37.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 122.197.116.28 at 2021-10-22 08:47:23 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/index.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 33ms (Views: 29.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 122.197.116.28 at 2021-10-22 08:47:57 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/index.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 34ms (Views: 30.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 122.197.116.28 at 2021-10-22 08:47:57 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/index.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 33ms (Views: 30.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books" for 122.197.116.28 at 2021-10-22 08:47:58 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:4
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.4ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 46ms (Views: 43.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books" for 122.197.116.28 at 2021-10-22 08:49:09 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:4
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.5ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"books"}, missing required keys: [:id]):
+    21:                 <td>
+    22:                  <%= attachment_image_tag @user, :profile_image, :fill, 40, 40, format: 'jpeg', fallback: "no_image.jpg" %>
+    23:                 </td>
+    24:                 <td><%= link_to book.title, book_path %></td>
+    25:                 <td><%= book.body %></td>
+    26:               </tr>
+    27:             <% end %>
+  
+app/views/books/index.html.erb:24:in `block in _app_views_books_index_html_erb__1057510819108035105_69846271232040'
+app/views/books/index.html.erb:19:in `_app_views_books_index_html_erb__1057510819108035105_69846271232040'
+Started GET "/books" for 122.197.116.28 at 2021-10-22 08:49:54 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:4
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.4ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 34ms (Views: 31.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/1" for 122.197.116.28 at 2021-10-22 08:50:02 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.4ms)
+  Rendered books/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 47ms (Views: 44.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/1" for 122.197.116.28 at 2021-10-22 08:50:12 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.4ms)
+  Rendered books/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 34ms (Views: 30.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 122.197.116.28 at 2021-10-22 08:50:14 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/index.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 33ms (Views: 30.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 122.197.116.28 at 2021-10-22 08:50:18 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_list.html.erb:18
+  Rendered books/_list.html.erb (2.7ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 122.197.116.28 at 2021-10-22 08:50:39 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_list.html.erb:18
+  Rendered books/_list.html.erb (2.6ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 122.197.116.28 at 2021-10-22 08:50:41 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_list.html.erb:18
+  Rendered books/_list.html.erb (2.7ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 48ms (Views: 45.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books" for 122.197.116.28 at 2021-10-22 08:50:42 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:4
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.4ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 34ms (Views: 31.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/1" for 122.197.116.28 at 2021-10-22 08:50:44 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.3ms)
+  Rendered books/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 32ms (Views: 28.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/books" for 122.197.116.28 at 2021-10-22 08:50:59 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yGVLfKwUoIogB2/3rXHVyNxVl5jn0wRFjQd3VSMh3LghRYfDBSntheSO+sOf4ZSmzz6S3Fhk/6W0wd4S0JzTOw==", "book"=>{"title"=>"a", "body"=>"a"}, "commit"=>"Create book"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:18
+  [1m[36mBook Create (0.8ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "a"], ["body", "a"], ["user_id", 1], ["created_at", "2021-10-22 08:50:59.426407"], ["updated_at", "2021-10-22 08:50:59.426407"]]
+  ↳ app/controllers/books_controller.rb:18
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:18
+Redirected to https://cde054a8a66448eb8653ea7e9668ae02.vfs.cloud9.us-east-1.amazonaws.com/books/4
+Completed 302 Found in 14ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/books/4" for 122.197.116.28 at 2021-10-22 08:50:59 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.3ms)
+  Rendered books/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 32ms (Views: 29.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/books" for 122.197.116.28 at 2021-10-22 08:51:05 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TxgKOT+FrUMayhL7U2VGtAP66tSmC648FY8x8STB8rxLqTTi5av2zD9I+cqYHJTmuPCoR6Wg09WjH7A8Oc+Iyw==", "book"=>{"title"=>"b", "body"=>"b"}, "commit"=>"Create book"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:18
+  [1m[36mBook Create (0.8ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "b"], ["body", "b"], ["user_id", 1], ["created_at", "2021-10-22 08:51:05.916167"], ["updated_at", "2021-10-22 08:51:05.916167"]]
+  ↳ app/controllers/books_controller.rb:18
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:18
+Redirected to https://cde054a8a66448eb8653ea7e9668ae02.vfs.cloud9.us-east-1.amazonaws.com/books/5
+Completed 302 Found in 15ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/books/5" for 122.197.116.28 at 2021-10-22 08:51:06 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.4ms)
+  Rendered books/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 33ms (Views: 29.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books" for 122.197.116.28 at 2021-10-22 08:52:41 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:4
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.4ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:19
+  Rendered books/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 48ms (Views: 45.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/1" for 122.197.116.28 at 2021-10-22 08:52:43 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.4ms)
+  Rendered books/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 34ms (Views: 30.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 122.197.116.28 at 2021-10-22 08:52:46 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/index.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 33ms (Views: 30.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 122.197.116.28 at 2021-10-22 08:52:48 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_list.html.erb:18
+  Rendered books/_list.html.erb (2.7ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for 122.197.116.28 at 2021-10-22 08:52:50 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:24
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for 122.197.116.28 at 2021-10-22 09:09:45 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (6.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:24
+Completed 200 OK in 94ms (Views: 66.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/1" for 122.197.116.28 at 2021-10-22 09:09:47 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_list.html.erb:18
+  Rendered books/_list.html.erb (3.2ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:18
+  Rendered users/show.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 45ms (Views: 34.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/books" for 122.197.116.28 at 2021-10-22 09:09:52 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qDD5dyvR+M+QPMqaFjTb3Cr5b8CivyaG8rruEZI06NRBEDXIguy1wFS1X64kpJqyOZJqhB0I3WbLfEdWYYnnVw==", "book"=>{"title"=>"a", "body"=>"a"}, "commit"=>"Create book"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:18
+  [1m[36mBook Create (2.6ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "a"], ["body", "a"], ["user_id", 1], ["created_at", "2021-10-22 09:09:52.027316"], ["updated_at", "2021-10-22 09:09:52.027316"]]
+  ↳ app/controllers/books_controller.rb:18
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:18
+Redirected to https://cde054a8a66448eb8653ea7e9668ae02.vfs.cloud9.us-east-1.amazonaws.com/books/6
+Completed 302 Found in 20ms (ActiveRecord: 11.1ms)
+
+
+Started GET "/books/6" for 122.197.116.28 at 2021-10-22 09:09:52 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.5ms)
+  Rendered books/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 35ms (Views: 30.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/6" for 122.197.116.28 at 2021-10-22 09:10:35 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.4ms)
+  Rendered books/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 58ms (Views: 54.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/books" for 122.197.116.28 at 2021-10-22 09:10:40 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V/K6hbQ94UPk8Ui1/cooxzRqFaXyrOasLUv5DCr7DltTQ4RebhO6zMFzo4Q2s/qVj2BXNvEHm0Wb23jBN/V0LA==", "book"=>{"title"=>"a", "body"=>"a"}, "commit"=>"Create book"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:18
+  [1m[36mBook Create (0.8ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "a"], ["body", "a"], ["user_id", 1], ["created_at", "2021-10-22 09:10:40.990618"], ["updated_at", "2021-10-22 09:10:40.990618"]]
+  ↳ app/controllers/books_controller.rb:18
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:18
+Redirected to https://cde054a8a66448eb8653ea7e9668ae02.vfs.cloud9.us-east-1.amazonaws.com/books/7
+Completed 302 Found in 14ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/books/7" for 122.197.116.28 at 2021-10-22 09:10:41 +0000
+Cannot render console from 122.197.116.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_list.html.erb (1.3ms)
+  Rendered books/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 33ms (Views: 29.4ms | ActiveRecord: 0.2ms)
+
+
