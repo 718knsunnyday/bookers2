@@ -1,6 +1,7 @@
+<p id="notice"><%= flash[:success] %></p>
+
 <div class="container px-5 px-sm-0">
   <div class="row">
-<p><%= flash[:success] %></p>
 
   <%= render 'books/list', user: @user, book: @book %>
 
